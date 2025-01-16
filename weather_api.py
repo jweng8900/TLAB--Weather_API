@@ -39,15 +39,10 @@ json_data = {
 # Create a DataFrame from the dictionary
 df = pd.DataFrame(json_data)
 
-# Save the DataFrame to a CSV file
-df.to_csv('weather_data.csv', index=False)
+# Define the folder path to save the CSV data
+data_folder_csv = 'data/csv'
+os.makedirs(data_folder_csv, exist_ok=True)  # Ensure the folder exists
+csv_path = os.path.join(data_folder_csv, 'weather_data.csv')
 
-data_folder = 'data/csv'
-os.makedirs(data_folder, exist_ok=True)  # Ensure the folder exists
-file_path = os.path.join(data_folder, "weather_data.csv")
-
-# Save the fetched data into a JSON file
-with open(file_path, 'w') as file:
-    json.dump(data, file, indent=4)
-
-print("CSV file has been created: 'weather_data.csv'")
+# Save the DataFrame to a CSV file in the 'data/csv' folder
+df.to_csv(csv_path, index=False)
