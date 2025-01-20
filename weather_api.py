@@ -25,19 +25,10 @@ with open(file_path, 'w') as file:
     json.dump(data, file, indent=4)
 
 # Extract the 'hourly' data from the fetched data
-hourly_data = data.get('hourly', {})
-
-# Prepare the data to be saved into a DataFrame
-json_data = {
-    "time": hourly_data.get("time", []),
-    "temperature_2m": hourly_data.get("temperature_2m", []),
-    "relative_humidity_2m": hourly_data.get("relative_humidity_2m", []),
-    "precipitation": hourly_data.get("precipitation", []),
-    "surface_pressure": hourly_data.get("surface_pressure", [])
-}
+hourly_data = data["hourly"]
 
 # Create a DataFrame from the dictionary
-df = pd.DataFrame(json_data)
+df = pd.DataFrame(hourly_data)
 
 # Define the folder path to save the CSV data
 data_folder_csv = 'data/csv'

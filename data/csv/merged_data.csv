@@ -1,0 +1,3 @@
+time,temperature_2m,relative_humidity_2m,precipitation,surface_pressure,country,subdivision,type,million_60kgs_bag,year,nonbear_mill_trees,bear_mill_trees,nonbear_thous_hect,bear_thous_hect,trees_hect_bear,trees_hect_nonbear,avg_unemp_perc
+2022-12-31,18.6,78.0,0.0,911.4,Brazil,Parana,Arabica,1.0,2022,1500.0,6010.0,470.0,2010.0,2990.0,3191.0,5.825
+2023-12-31,20.7,78.0,0.0,913.4,Brazil,Parana,Arabica,0.8,2023,1510.0,6100.0,475.0,2020.0,3020.0,3179.0,
